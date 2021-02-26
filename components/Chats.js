@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { motion } from "framer-motion";
+
 const Chats = () => {
   return ( 
-    <div className="chats">
+    <motion.div className="chats" whileHover={{scale:1.1}}>
       <p>UNÍTE A NUESTRO GRUPO:</p>
       <div className="icons">
         <div className="icon">
@@ -17,7 +19,7 @@ const Chats = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
    );
 }
 
