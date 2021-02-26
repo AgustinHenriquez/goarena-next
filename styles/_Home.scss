@@ -1,0 +1,16 @@
+.hero {
+  padding: 2.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .title {
+    padding-bottom: 2rem;
+  }
+}

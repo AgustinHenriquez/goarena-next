@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(../public/background.jpg);
+  background-color: #2b2d42;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #2b2d42;
+  box-shadow: 0px 3px 10px rgb(29, 29, 29);
+
+  .logo {
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #edf2f4;
+      font-weight: 600;
+      font-size: 16px;
+
+      &:hover {
+        color: #ccd0d1;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: #edf2f4;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #2b2d42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+@import './Home';
+@import './Chats';
+@import './HeroTournament';
+@import './Liga';

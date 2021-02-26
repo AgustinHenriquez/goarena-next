@@ -1,0 +1,24 @@
+.chats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  min-width: 240px;
+  min-height: 160px;
+  width: 240px;
+  height: 160px;
+  background: #2b2d42;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgb(29, 29, 29);
+
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    a svg {
+      fill: white;
+    }
+  }
+}
