@@ -1,11 +1,11 @@
 import Hero from "../components/Hero"
-import HeroTournament from "../components/HeroTournament"
+import HeroBanner from "../components/HeroBanner"
 
 export default function Home() {
   return (
     <div className="">
+      <HeroBanner/>
       <Hero/>  
-      <HeroTournament/>
     </div>
   )
 }
