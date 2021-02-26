@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Competitor from '../components/Competitor'
 
 import { useState } from 'react';
-import { competitorState } from './ligaState' 
+import { competitorState } from './api/ligaState' 
 
 
 const Liga = () => {
