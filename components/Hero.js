@@ -10,7 +10,7 @@ const Hero = () => {
         <h3>Torneos, información, práctica</h3>
         <h3>todo lo necesario para ser el mejor.</h3>
       </div>
-      
+      <Chats/>
     </div>
    );
 }
