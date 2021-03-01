@@ -1,5 +1,3 @@
-
-
 export const competitorState = [  
     {
       nick: "AgustinH",

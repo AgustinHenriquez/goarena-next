@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 
 const HeroBanner = ({}) => {
-  const constraintsRef = useRef(null);
   return ( 
-    <div className="heroBanner" ref={constraintsRef}>
-      <motion.div className="azu" drag dragConstraints={constraintsRef} initial={{x:-500}} animate={{x:0}} transition={{duration:2, delay:1, type:'spring'}}>
+    <div className="heroBanner">
+      <motion.div className="azu"  initial={{x:-500}} animate={{x:0}} transition={{duration:2, delay:1, type:'spring'}}>
         <Image draggable="false" src="/azu.png" width={500} height={500}/>
       </motion.div>
       <motion.div className="title" initial={{opacity:0, x:-100}} animate={{opacity:1, x:0}} transition={{duration:0.75}}>
@@ -20,7 +18,7 @@ const HeroBanner = ({}) => {
           <div className="line3"/>
         </motion.div>
       </motion.div>
-      <motion.div drag dragConstraints={constraintsRef} className="image" initial={{x:500}} animate={{x:0}} transition={{duration:2, delay:1, type:'spring'}}>
+      <motion.div  className="image" initial={{x:500}} animate={{x:0}} transition={{duration:2, delay:1, type:'spring'}}>
         <Image draggable="false" src="/Altaria.png" width={500} height={500}/>
       </motion.div>
     </div>
