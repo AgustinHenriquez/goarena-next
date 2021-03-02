@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import TournamentPage from '../../components/TournamentPage'
-
 import { tournaments } from "../api/tournamentState";
 
 const Torneos = () => {
