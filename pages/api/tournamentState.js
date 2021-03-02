@@ -14,6 +14,7 @@ export const mainTournament = {
 
 export const tournaments = [
   {
+    id: "vortex",
     title: "COPA VORTEX MENDOZA",
     league: "SILPH LEAGUE TOURNAMENT",
     media: "vortex",
@@ -26,6 +27,7 @@ export const tournaments = [
     results: ["", "", "", "", "", ""],
   },
   {
+    id: "laberinto",
     title: "COPA LABERINTO MENDOZA",
     league: "SILPH LEAGUE TOURNAMENT",
     media: "labyrinth",

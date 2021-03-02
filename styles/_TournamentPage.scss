@@ -96,3 +96,13 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    align-items: center;
+    a {
+      padding-top: 10px;
+    }
+  }
+}
