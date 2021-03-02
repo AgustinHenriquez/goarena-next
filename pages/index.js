@@ -6,10 +6,9 @@ import { mainTournament } from "./api/tournamentState";
 
 export default function Home() {
   return (
-    <div className="contentwraper">
+    <div>
       <HeroBanner/>
       <Hero/>  
-
     </div>
   )
 }

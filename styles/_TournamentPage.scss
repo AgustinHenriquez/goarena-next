@@ -1,0 +1,98 @@
+.tournamentPage {
+  margin-top: 2rem;
+
+  background-color: #262736;
+
+  .league {
+    padding: 1rem;
+    color: #b0b4b6;
+  }
+
+  .title {
+    padding: 1rem;
+    min-height: 40vh;
+    color: white;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      color: white;
+      z-index: 2;
+    }
+    .overlay {
+      position: absolute;
+      opacity: 0.7;
+      background-color: #262736;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-around;
+    color: #b0b4b6;
+    padding: 1rem 0rem;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    svg {
+      fill: #b0b4b6;
+    }
+    h4 {
+      font-weight: 400;
+      font-size: small;
+    }
+    h2 {
+      color: white;
+      font-size: large;
+    }
+  }
+
+  .description {
+    background-color: #2b2d42;
+    padding: 2rem 3rem;
+    h4 {
+      text-align: center;
+      font-weight: 500;
+      color: #b0b4b6;
+      line-height: 1.5rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+
+    button {
+      color: white;
+      padding: 1rem;
+      margin: 0rem 1rem;
+      min-width: 200px;
+      border-radius: 2px;
+      border: none;
+      box-shadow: 3px 3px 10px rgb(29, 29, 29);
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #rsvp {
+      background-color: #ef233c;
+      &:hover {
+        color: #b0b4b6;
+      }
+    }
+    #chat {
+      background-color: #8d99ae;
+      &:hover {
+        color: #b0b4b6;
+      }
+    }
+  }
+}
