@@ -1,8 +1,8 @@
 import Image from 'next/image'
-
+import Podium from '../components/Podium'
 
 const TournamentPage = ({ tournament }) => {
-  const {title, media, league, round, date, format, description, link, chat} = tournament;
+  const {title, status, media, league, round, date, format, description, link, chat, results} = tournament;
   return ( 
     <div className="tournamentPage">
       
@@ -15,6 +15,7 @@ const TournamentPage = ({ tournament }) => {
         <Image className="badge" src={`/badges/${media}.png`} alt="Tournament Badge" width={120} height={120}/>
         <h1>{title}</h1>
       </div>
+      
       
       <div className="info">
         <div>
@@ -37,11 +38,24 @@ const TournamentPage = ({ tournament }) => {
       <div className="description">
         <h4>{description}</h4>
       </div>
+      {status==="INSCRIPCIONES ABIERTAS" &&(
+        <div className="links">
+          <a href={link} target="_blank"><button id="rsvp">INSCRIPCIÓN</button></a>
+          <a href={chat} target="_blank"><button id="chat">CHAT</button></a>
+        </div>
+      )}
 
-      <div className="links">
-        <a href={link} target="_blank"><button id="rsvp">INSCRIPCIÓN</button></a>
-        <a href={chat} target="_blank"><button id="chat">CHAT</button></a>
-      </div>
+      {status==="FINALIZADO" &&(
+        <div className="results">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 0c0 9.803 5.105 12.053 5.604 16h2.805c.497-3.947 5.591-6.197 5.591-16h-14zm7.006 14.62c-.408-.998-.969-1.959-1.548-2.953-1.422-2.438-3.011-5.162-3.379-9.667h9.842c-.368 4.506-1.953 7.23-3.372 9.669-.577.993-1.136 1.954-1.543 2.951zm-.006-3.073c-1.125-2.563-1.849-5.599-1.857-8.547h-1.383c.374 3.118 1.857 7.023 3.24 8.547zm12-9.547c-.372 4.105-2.808 8.091-6.873 9.438.297-.552.596-1.145.882-1.783 2.915-1.521 4.037-4.25 4.464-6.251h-2.688c.059-.45.103-.922.139-1.405h4.076zm-24 0c.372 4.105 2.808 8.091 6.873 9.438-.297-.552-.596-1.145-.882-1.783-2.915-1.521-4.037-4.25-4.464-6.251h2.688c-.058-.449-.102-.922-.138-1.404h-4.077zm13.438 15h-2.866c-.202 1.187-1.63 2.619-3.571 2.619v4.381h10v-4.381c-1.999 0-3.371-1.432-3.563-2.619zm2.562 6h-8v-2h8v2z"/></svg>
+          <Podium results={results}/>
+          <div className="links">
+            <a href={`https://silph.gg/tournaments/host/`+ link.slice(-4)} target="_blank"><button id="resultsLink">RESULTADOS</button></a>
+            <a href="https://silph.gg/c/74365a42/leaderboard" target="_blank"><button id="resultsLink">TABLA</button></a>
+          </div>
+        </div>
+
+      )}
     </div>
    );
 }

@@ -1,0 +1,34 @@
+.podium {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  padding: 0rem 0.5rem;
+
+  .player {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    height: 80px;
+
+    background-color: #2b2d42;
+    flex: 1 1 250px;
+
+    #place {
+      border-right: 2px solid #262736;
+      height: 100%;
+      width: 30%;
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #nick {
+      width: 100%;
+      color: #b0b4b6;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
