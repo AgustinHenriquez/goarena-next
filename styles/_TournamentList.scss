@@ -1,0 +1,17 @@
+.tournamentList {
+  background-color: #262736;
+  margin: 1rem;
+  .filter {
+    display: flex;
+    padding: 2rem;
+    list-style-type: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    li {
+      margin: 0rem 1rem;
+      padding-bottom: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,10 +1,14 @@
 .torneos {
+  margin-top: 2rem;
+  h1 {
+    padding: 0rem 1rem;
+    color: #b0b4b6;
+  }
   .spotlightTournaments {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 
-    margin-top: 2rem;
     overflow: hidden;
   }
   a {

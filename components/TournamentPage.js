@@ -51,10 +51,9 @@ const TournamentPage = ({ tournament }) => {
           <Podium results={results}/>
           <div className="links">
             <a href={`https://silph.gg/tournaments/host/`+ link.slice(-4)} target="_blank"><button id="resultsLink">RESULTADOS</button></a>
-            <a href="https://silph.gg/c/74365a42/leaderboard" target="_blank"><button id="resultsLink">TABLA</button></a>
+            <a href="https://silph.gg/c/74365a42/leaderboard" target="_blank"><button id="resultsLink">RANKING</button></a>
           </div>
         </div>
-
       )}
     </div>
    );
