@@ -1,15 +1,17 @@
 
 export const mainTournament = {
-  title: "COPA LABERINTO MENDOZA",
+  id: "vortex",
+  title: "COPA VORTEX MENDOZA",
+  status: "INSCRIPCIONES ABIERTAS",
   league: "SILPH LEAGUE TOURNAMENT",
-  media: "labyrinth",
-  round: "30 minutos",
-  date: "27 Feb, 18:00",
+  media: "vortex",
+  round: "Relámpago",
+  date: "20 Mar, 18:00",
   format: "Suizo",
-  link: "https://silph.gg/t/cgy3",
+  link: "https://silph.gg/t/gans",
   chat: "https://chat.whatsapp.com/IY0EkLw2RSxGdhclEe15Ay",
-  description: "La Copa Laberinto es la nueva copa mensual de Silph League! La temática del torneo es que los pokémon del equipo no pueden compartir tipos entre ellos.",
-  results: ["Lirhygon", "EfraC89", "Gonzamza87", "miguelon2023", "fcuz11", "AhmedMusa444"],
+  description: "La Copa Vortex es la nueva copa mensual de Silph League! La temática del torneo es que los pokémon del equipo no pueden compartir tipos entre ellos.",
+  results: ["", "", "", "", "", ""],
 }
 
 export const tournaments = [
@@ -33,8 +35,8 @@ export const tournaments = [
     status: "FINALIZADO",
     league: "SILPH LEAGUE TOURNAMENT",
     media: "labyrinth",
-    round: "Relámpago",
-    date: "27 Feb, 18:00",
+    round: "Semanal",
+    date: "22 Feb, 18:00",
     format: "Suizo",
     link: "https://silph.gg/t/cgy3",
     chat: "https://chat.whatsapp.com/IY0EkLw2RSxGdhclEe15Ay",

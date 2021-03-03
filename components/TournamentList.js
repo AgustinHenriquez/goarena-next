@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import {tournaments} from '../pages/api/tournamentState'
 import {useState} from 'react'
 const TournamentList = () => {
@@ -8,8 +10,8 @@ const TournamentList = () => {
   const active = { borderBottom: '5px solid #ef233c', fontWeight: '700' }
   const filterStyles = [
     filter === 'todos'? active : {},
-    filter === 'proximamente'? active : {},
-    filter === 'finalizados'? active : {},
+    filter === 'INSCRIPCIONES ABIERTAS'? active : {},
+    filter === 'FINALIZADO'? active : {},
   ]
   return ( 
     <div className="tournamentList">
@@ -19,8 +21,19 @@ const TournamentList = () => {
         <li id="FINALIZADO" onClick={navHandler} style={filterStyles[2]}>FINALIZADOS</li>
       </ul>
     <div className="list">
-      {tournaments.filter(torneo=> filter==='todos' || torneo.status === filter).map(tournament => (
-        <h1>{tournament.title}</h1>
+      {tournaments.filter(tournament=> filter==='todos' || tournament.status === filter).map(tournament => (
+        <div className="item">
+          <span className="badge">
+          <Image src={`/badges/${tournament.media}.png`} alt="Tournament Badge" width={40} height={40}/>
+          </span>
+          <span className="info">
+            <h3>{tournament.title}</h3>
+            <span id="subTitle">
+              <h4>{tournament.league === 'SILPH LEAGUE TOURNAMENT'? "Silph League" : tournament.league}</h4>
+              <h4>{tournament.date}</h4>
+            </span>
+          </span>
+        </div>
       ))}
     </div>
     </div>

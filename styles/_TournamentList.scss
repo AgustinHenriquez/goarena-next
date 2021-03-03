@@ -14,4 +14,30 @@
       cursor: pointer;
     }
   }
+  .list {
+    padding: 1rem 2rem;
+    color: white;
+    width: 100%;
+    .item {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      border-bottom: 1px solid #b0b4b6;
+
+      .badge {
+        padding-right: 2rem;
+      }
+
+      .info {
+        width: 100%;
+        #subTitle {
+          width: 60%;
+          color: #8c8c8c;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
 }
