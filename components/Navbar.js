@@ -28,7 +28,7 @@ const Navbar = () => {
             <Link href="/liga"><a>LIGA</a></Link>
           </li>
           <li>
-            <Link href="/guias"><a>GUÍAS</a></Link>
+            <Link href="/calculadora"><a>CALCULADORA</a></Link>
           </li>
         </ul>
         <div className={`burger ${navbar.isSliderOn ? 'toggle' : ''}`} onClick={sliderToggle}>
